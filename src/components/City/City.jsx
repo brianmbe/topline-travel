@@ -1,6 +1,15 @@
+import { useParams, useSearchParams } from "react-router-dom";
+import Button from "../Button/Button";
 import styles from "./City.module.css";
 
 function City() {
+  const { id } = useParams();
+
+  const [searchParam, setSearchParam] = useSearchParams();
+
+  const lat = searchParam.get("lat");
+  const lng = searchParam.get("lng");
+
   // TEMP DATA
   const currentCity = {
     cityName: "Lisbon",
@@ -12,6 +21,13 @@ function City() {
   const { cityName, emoji, date, notes } = currentCity;
 
   return (
+    <>
+      <h1>City :{id}</h1>
+      <p>
+        Position: Lat={lat} & Lng={lng}
+      </p>
+    </>
+    /* 
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
@@ -22,7 +38,6 @@ function City() {
 
       <div className={styles.row}>
         <h6>You went to {cityName} on</h6>
-        <p>{formatDate(date || null)}</p>
       </div>
 
       {notes && (
@@ -44,9 +59,10 @@ function City() {
       </div>
 
       <div>
-        <ButtonBack />
+        <Button>Back</Button>
       </div>
     </div>
+     */
   );
 }
 
