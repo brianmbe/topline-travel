@@ -1,33 +1,25 @@
-import { useParams, useSearchParams } from "react-router-dom";
-import Button from "../Button/Button";
+import { useParams } from "react-router-dom";
 import styles from "./City.module.css";
+import { useCities } from "../../context/CitiesContext";
+import { useEffect } from "react";
+import { formatDate } from "./formatDate";
+import Spinner from "../Spinner/Spinner";
+import Backbutton from "../Button/Backbutton";
 
 function City() {
   const { id } = useParams();
+  const { getCity, currentCity, isLoading } = useCities();
 
-  const [searchParam, setSearchParam] = useSearchParams();
+  useEffect(() => {
+    getCity(id);
+  }, [id]);
 
-  const lat = searchParam.get("lat");
-  const lng = searchParam.get("lng");
-
-  // TEMP DATA
-  const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
-  };
+  if (isLoading) return <Spinner />;
+  if (!currentCity) return <p>No city data found</p>;
 
   const { cityName, emoji, date, notes } = currentCity;
 
   return (
-    <>
-      <h1>City :{id}</h1>
-      <p>
-        Position: Lat={lat} & Lng={lng}
-      </p>
-    </>
-    /* 
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
@@ -37,7 +29,9 @@ function City() {
       </div>
 
       <div className={styles.row}>
-        <h6>You went to {cityName} on</h6>
+        <h6>
+          You went to {cityName} on {formatDate(date)}
+        </h6>
       </div>
 
       {notes && (
@@ -59,10 +53,9 @@ function City() {
       </div>
 
       <div>
-        <Button>Back</Button>
+        <Backbutton />
       </div>
     </div>
-     */
   );
 }
 
