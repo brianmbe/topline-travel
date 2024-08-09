@@ -1,10 +1,13 @@
-import { useParams } from "react-router-dom";
-import styles from "./City.module.css";
-import { useCities } from "../../context/CitiesContext";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+
+import { useCities } from "../../context/CitiesContext";
 import { formatDate } from "./formatDate";
 import Spinner from "../Spinner/Spinner";
 import Backbutton from "../Button/Backbutton";
+
+import styles from "./City.module.css";
+import { countryFlag } from "./CountryFlag";
 
 function City() {
   const { id } = useParams();
@@ -24,7 +27,7 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{emoji}</span> {cityName}
+          <span>{countryFlag(emoji)}</span> {cityName}
         </h3>
       </div>
 

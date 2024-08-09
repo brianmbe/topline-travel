@@ -3,7 +3,7 @@
     {
       "cityName": "Lisbon",
       "country": "Portugal",
-      "emoji": "🇵🇹",
+      "emoji": "PT",
       "date": "2027-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
@@ -15,9 +15,9 @@
     {
       "cityName": "Madrid",
       "country": "Spain",
-      "emoji": "🇪🇸",
+      "emoji": "ES",
       "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "notes": "Madrid houses the headquarters of the UN's World Tourism Organization (UNWTO)",
       "position": {
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
@@ -25,62 +25,74 @@
       "id": 17806751
     },
     {
+      "cityName": "Nairobi",
+      "country": "Kenya",
+      "emoji": "KE",
+      "date": "2024-07-15T08:22:53.976Z",
+      "notes": "Nairobi is the best place so far!",
+      "position": {
+        "lat": -1.292066,
+        "lng": 36.821945
+      },
+      "id": 906331
+    },
+    {
       "cityName": "Berlin",
       "country": "Germany",
-      "emoji": "🇩🇪",
+      "emoji": "DE",
       "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "notes": "Amazing People😁",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": 52.520008,
+        "lng": 13.404954
       },
       "id": 98443197
     },
     {
       "cityName": "Kampala",
       "country": "Uganda",
-      "emoji": "🇺🇬",
+      "emoji": "UG",
       "date": "2027-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
+        "lat": 0.347596,
+        "lng": 32.58252
       },
       "id": 7393038
     },
     {
       "cityName": "Venice",
       "country": "Italy",
-      "emoji": "🇮🇹",
+      "emoji": "IT",
       "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "notes": "Venice has been known as `La Dominante`, `La Serenissima`, `Queen of the Adriatic`",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 45.440845,
+        "lng": 12.315515
       },
       "id": 1806751
     },
     {
       "cityName": "Mainz",
       "country": "Germany",
-      "emoji": "🇩🇪",
+      "emoji": "DE",
       "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "notes": "the birthplace of Johannes Gutenberg. Lovely 😍❤",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": 49.992863,
+        "lng": 8.247253
       },
       "id": 98443197222
     },
     {
       "cityName": "Rome",
       "country": "Italy",
-      "emoji": "🇮🇹",
+      "emoji": "IT",
       "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "notes": "The centre of the Catholic Church",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 41.902782,
+        "lng": 12.496365
       },
       "id": 180666751
     }
