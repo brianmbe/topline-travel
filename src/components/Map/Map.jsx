@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useEffect, useState } from "react";
 
@@ -8,12 +8,12 @@ import { countryFlag } from "../City/CountryFlag";
 import { ChangeMapCenter } from "./ChangeMapCenter";
 import { DetectMapClick } from "./DetectMapClick";
 import { useGeolocation } from "../../hooks/useGeoLocation";
+import useUrlPosition from "../../hooks/useUrlPosition";
 
 import styles from "./Map.module.css";
 import Button from "../Button/Button";
 
 export default function Map() {
-  const [searchParam] = useSearchParams();
   const [mapPosition, setMapPosition] = useState([0.347596, 32.58252]);
   const { cities } = useCities();
   const {
@@ -22,12 +22,11 @@ export default function Map() {
     getPosition,
   } = useGeolocation();
 
-  const mapLat = parseFloat(searchParam.get("lat"));
-  const mapLng = parseFloat(searchParam.get("lng"));
+  const { lat, lng } = useUrlPosition();
 
   useEffect(() => {
-    if (mapLat && mapLng) setMapPosition([mapLat, mapLng]); // Pass an array
-  }, [mapLat, mapLng]);
+    if (lat && lng) setMapPosition([lat, lng]); // Pass an array
+  }, [lat, lng]);
 
   useEffect(() => {
     if (geoLocationPosition)

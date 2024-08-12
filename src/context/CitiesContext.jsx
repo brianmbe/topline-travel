@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 
@@ -31,6 +32,7 @@ function CitiesProvider({ children }) {
   // http request to get a single city data
   async function getCity(id) {
     try {
+      setIsLoading(true);
       const res = await fetch(`${BASE_URL}/cities/${id}`);
       const data = await res.json();
 
@@ -42,8 +44,33 @@ function CitiesProvider({ children }) {
     }
   }
 
+  // Adding a new city in the database
+  async function createNewCity(newCity) {
+    try {
+      setIsLoading(true);
+
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+
+      console.log(data);
+    } catch {
+      alert("There was an error while creatign the new city........");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
-    <CitiesContext.Provider value={{ cities, isLoading, currentCity, getCity }}>
+    <CitiesContext.Provider
+      value={{ cities, isLoading, currentCity, getCity, createNewCity }}
+    >
       {children}
     </CitiesContext.Provider>
   );

@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Nairobi",
@@ -34,7 +34,7 @@
         "lat": -1.292066,
         "lng": 36.821945
       },
-      "id": 906331
+      "id": "906331"
     },
     {
       "cityName": "Berlin",
@@ -46,7 +46,7 @@
         "lat": 52.520008,
         "lng": 13.404954
       },
-      "id": 98443197
+      "id": "98443197"
     },
     {
       "cityName": "Kampala",
@@ -58,7 +58,7 @@
         "lat": 0.347596,
         "lng": 32.58252
       },
-      "id": 7393038
+      "id": "7393038"
     },
     {
       "cityName": "Venice",
@@ -70,7 +70,7 @@
         "lat": 45.440845,
         "lng": 12.315515
       },
-      "id": 1806751
+      "id": "1806751"
     },
     {
       "cityName": "Mainz",
@@ -82,7 +82,7 @@
         "lat": 49.992863,
         "lng": 8.247253
       },
-      "id": 98443197222
+      "id": "98443197222"
     },
     {
       "cityName": "Rome",
@@ -94,7 +94,30 @@
         "lat": 41.902782,
         "lng": 12.496365
       },
-      "id": 180666751
+      "id": "180666751"
+    },
+    {
+      "id": "6a3b",
+      "cityName": "Juba",
+      "countryName": "South Sudan",
+      "emoji": "SS",
+      "date": "2024-08-10",
+      "notes": "State of South Sudan",
+      "position": {
+        "mapLat": 4.761756286337329,
+        "mapLng": 31.772460937500004
+      }
+    },
+    {
+      "cityName": "Cape Town",
+      "country": "South Africa",
+      "emoji": "ZA",
+      "date": "2024-08-10T09:30:00.000Z",
+      "notes": "Cape Town has stunning views and beautiful beaches!",
+      "position": {
+        "lat": -33.924869,
+        "lng": 18.424055
+      }
     }
   ]
 }
